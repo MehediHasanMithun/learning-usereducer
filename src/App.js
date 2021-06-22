@@ -1,5 +1,6 @@
 import { useReducer, useState } from 'react';
 import './App.css';
+import Counter from './Components/Counter/Counter';
 import Todo from './Components/Todo/Todo';
 
 export const ACTIONS ={
@@ -51,7 +52,10 @@ function App() {
     console.log(todos);
 
   return (
-    <div>
+    <div className="App">
+        <Counter></Counter>
+        <br /><br /><br />
+        <h3>TODO List</h3>
         <form onSubmit={handleSubmit}>
           <input type="text" value={name} onChange={e=>setName(e.target.value)} />
         </form>
